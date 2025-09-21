@@ -1,0 +1,84 @@
+
+body {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+  background: #fff;
+  
+}
+
+.menu{
+	color: black;
+	font-size: 1.75em ;
+	text-align: center;
+	font-weight: bold;
+}
+
+.section-container {
+    width: 100%;
+    
+}
+.section{
+	display: inline-block;
+	position: relative;
+	border: 1px solid;
+	margin: 2px;
+	padding: 20px;
+	background: #a9a9a9;
+	border-radius: 10px;
+}
+
+.section-head{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 5px 20px 5px 20px;
+	border: 1px solid black;
+	margin-bottom: 5px;
+}
+.chicken-head{
+	background-color: pink;
+
+}
+.shrimp-head{
+	background-color: indianred;
+}
+.beef-head{
+	background: lightyellow;
+}
+
+
+
+@media(min-width: 992px){
+	
+	.section{
+		float: left;
+		width: calc(33.33% - 5px);
+		box-sizing: border-box;
+
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+    float: left;
+    width: calc(50% - 5px); /* slightly reduce width to make room for the gap */
+    margin: 0; /* remove default margin */
+    margin-bottom: 10px; /* just add vertical space */
+    box-sizing: border-box;
+  }
+
+  /* Add horizontal gap only between the first and second card */
+  .section:nth-child(2) {
+    margin-left: 10px;
+  }
+
+  /* Make the 3rd section full width */
+  .section:nth-child(3) {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .section {
+    width: 100%; /* each section takes full row */
+    box-sizing: border-box;
+    padding: 10px;
+  }
+}
