@@ -1,0 +1,58 @@
+/* css/style.css - Simple version for Module 3 */
+
+/* --- Mobile dropdown: make the collapsed menu full-width and distinct --- */
+.navbar .navbar-collapse {
+  position: relative;
+  top: 50px;           /* sits below the navbar header */
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #f7f7f7; /* distinct background */
+  border-top: 1px solid #ddd;
+  padding: 0;
+}
+
+
+
+
+/* Hide the collapse content on tablet/desktop so only brand shows */
+@media (min-width: 768px) {
+  .navbar .navbar-collapse { display: none !important; }
+}
+ 
+
+
+/* Mobile menu list styling */
+.navbar-mobile-menu { margin: 0; padding: 0; list-style: none; }
+.navbar-mobile-menu > li > a {
+  display: block;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e9e9e9;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Keep the brand visible on top of the dropdown (no overlap issues) */
+.navbar-brand { position: relative; z-index: 1000; }
+
+/* Page heading centered using Bootstrap class but add small spacing */
+.page-heading { margin: 28px 0; }
+
+/* Tall required section (forces scrolling) */
+.tall-section {
+  background: #eef7f9;
+  padding: 30px 0;
+  min-height: 1000px; /* tall enough to require scrolling */
+  box-sizing: border-box;
+}
+
+/* Optional: simple styles for the 3-column sections (UNGRADED part) */
+.section {
+  background: lightgrey;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+/* Back to top link */
+.back-top { text-align: center; margin-top: 20px; }
